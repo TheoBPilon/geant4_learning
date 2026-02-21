@@ -1,0 +1,7 @@
+/home/theobp/geant4/codigos-testes/relatorio_fapesp/build/CMakeFiles/simplesMC.dir
+/home/theobp/geant4/codigos-testes/relatorio_fapesp/build/CMakeFiles/edit_cache.dir
+/home/theobp/geant4/codigos-testes/relatorio_fapesp/build/CMakeFiles/rebuild_cache.dir
+/home/theobp/geant4/codigos-testes/relatorio_fapesp/build/CMakeFiles/list_install_components.dir
+/home/theobp/geant4/codigos-testes/relatorio_fapesp/build/CMakeFiles/install.dir
+/home/theobp/geant4/codigos-testes/relatorio_fapesp/build/CMakeFiles/install/local.dir
+/home/theobp/geant4/codigos-testes/relatorio_fapesp/build/CMakeFiles/install/strip.dir
