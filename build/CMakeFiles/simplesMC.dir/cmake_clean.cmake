@@ -1,8 +1,11 @@
 file(REMOVE_RECURSE
+  "CMakeFiles/simplesMC.dir/link.d"
   "CMakeFiles/simplesMC.dir/MyActionInitialization.cpp.o"
   "CMakeFiles/simplesMC.dir/MyActionInitialization.cpp.o.d"
   "CMakeFiles/simplesMC.dir/MyDetector.cpp.o"
   "CMakeFiles/simplesMC.dir/MyDetector.cpp.o.d"
+  "CMakeFiles/simplesMC.dir/MyEventAction.cpp.o"
+  "CMakeFiles/simplesMC.dir/MyEventAction.cpp.o.d"
   "CMakeFiles/simplesMC.dir/MyRunAction.cpp.o"
   "CMakeFiles/simplesMC.dir/MyRunAction.cpp.o.d"
   "CMakeFiles/simplesMC.dir/MySteppingAction.cpp.o"

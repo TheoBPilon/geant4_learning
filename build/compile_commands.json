@@ -1,0 +1,44 @@
+[
+{
+  "directory": "/home/theobp/geant4-projects/geant4_learning/build",
+  "command": "/usr/bin/c++ -DG4LIB_BUILD_DLL -DG4UI_USE_QT -DG4UI_USE_XM -DG4VIS_USE_OI -DG4VIS_USE_OIQT -DG4VIS_USE_OPENGLQT -DG4VIS_USE_OPENGLX -DG4VIS_USE_OPENGLXM -DG4VIS_USE_RAYTRACERX -DG4VIS_USE_RAYTRACER_QT -DG4VIS_USE_TOOLSSG_QT_GLES -DG4VIS_USE_TOOLSSG_QT_ZB -DG4VIS_USE_TOOLSSG_X11_GLES -DG4VIS_USE_TOOLSSG_X11_ZB -DG4VIS_USE_TOOLSSG_XT_GLES -DG4VIS_USE_TOOLSSG_XT_ZB -DPTL_BUILD_DLL -DQT_CORE_LIB -DQT_GUI_LIB -DQT_NO_DEBUG -DQT_OPENGL_LIB -DQT_WIDGETS_LIB -I/home/theobp/geant4-projects/geant4_learning/include -isystem /opt/Geant4/Geant4-v11.4.0/include/Geant4 -isystem /usr/include/qt6/QtCore -isystem /usr/include/qt6 -isystem /usr/lib/qt6/mkspecs/linux-g++ -isystem /usr/include/qt6/QtGui -isystem /usr/include/qt6/QtWidgets -isystem /usr/include/freetype2 -isystem /usr/include/qt6/QtOpenGL -std=gnu++17 -mno-direct-extern-access -o CMakeFiles/simplesMC.dir/main.cpp.o -c /home/theobp/geant4-projects/geant4_learning/main.cpp",
+  "file": "/home/theobp/geant4-projects/geant4_learning/main.cpp",
+  "output": "CMakeFiles/simplesMC.dir/main.cpp.o"
+},
+{
+  "directory": "/home/theobp/geant4-projects/geant4_learning/build",
+  "command": "/usr/bin/c++ -DG4LIB_BUILD_DLL -DG4UI_USE_QT -DG4UI_USE_XM -DG4VIS_USE_OI -DG4VIS_USE_OIQT -DG4VIS_USE_OPENGLQT -DG4VIS_USE_OPENGLX -DG4VIS_USE_OPENGLXM -DG4VIS_USE_RAYTRACERX -DG4VIS_USE_RAYTRACER_QT -DG4VIS_USE_TOOLSSG_QT_GLES -DG4VIS_USE_TOOLSSG_QT_ZB -DG4VIS_USE_TOOLSSG_X11_GLES -DG4VIS_USE_TOOLSSG_X11_ZB -DG4VIS_USE_TOOLSSG_XT_GLES -DG4VIS_USE_TOOLSSG_XT_ZB -DPTL_BUILD_DLL -DQT_CORE_LIB -DQT_GUI_LIB -DQT_NO_DEBUG -DQT_OPENGL_LIB -DQT_WIDGETS_LIB -I/home/theobp/geant4-projects/geant4_learning/include -isystem /opt/Geant4/Geant4-v11.4.0/include/Geant4 -isystem /usr/include/qt6/QtCore -isystem /usr/include/qt6 -isystem /usr/lib/qt6/mkspecs/linux-g++ -isystem /usr/include/qt6/QtGui -isystem /usr/include/qt6/QtWidgets -isystem /usr/include/freetype2 -isystem /usr/include/qt6/QtOpenGL -std=gnu++17 -mno-direct-extern-access -o CMakeFiles/simplesMC.dir/MyDetector.cpp.o -c /home/theobp/geant4-projects/geant4_learning/MyDetector.cpp",
+  "file": "/home/theobp/geant4-projects/geant4_learning/MyDetector.cpp",
+  "output": "CMakeFiles/simplesMC.dir/MyDetector.cpp.o"
+},
+{
+  "directory": "/home/theobp/geant4-projects/geant4_learning/build",
+  "command": "/usr/bin/c++ -DG4LIB_BUILD_DLL -DG4UI_USE_QT -DG4UI_USE_XM -DG4VIS_USE_OI -DG4VIS_USE_OIQT -DG4VIS_USE_OPENGLQT -DG4VIS_USE_OPENGLX -DG4VIS_USE_OPENGLXM -DG4VIS_USE_RAYTRACERX -DG4VIS_USE_RAYTRACER_QT -DG4VIS_USE_TOOLSSG_QT_GLES -DG4VIS_USE_TOOLSSG_QT_ZB -DG4VIS_USE_TOOLSSG_X11_GLES -DG4VIS_USE_TOOLSSG_X11_ZB -DG4VIS_USE_TOOLSSG_XT_GLES -DG4VIS_USE_TOOLSSG_XT_ZB -DPTL_BUILD_DLL -DQT_CORE_LIB -DQT_GUI_LIB -DQT_NO_DEBUG -DQT_OPENGL_LIB -DQT_WIDGETS_LIB -I/home/theobp/geant4-projects/geant4_learning/include -isystem /opt/Geant4/Geant4-v11.4.0/include/Geant4 -isystem /usr/include/qt6/QtCore -isystem /usr/include/qt6 -isystem /usr/lib/qt6/mkspecs/linux-g++ -isystem /usr/include/qt6/QtGui -isystem /usr/include/qt6/QtWidgets -isystem /usr/include/freetype2 -isystem /usr/include/qt6/QtOpenGL -std=gnu++17 -mno-direct-extern-access -o CMakeFiles/simplesMC.dir/PrimaryGenerator.cpp.o -c /home/theobp/geant4-projects/geant4_learning/PrimaryGenerator.cpp",
+  "file": "/home/theobp/geant4-projects/geant4_learning/PrimaryGenerator.cpp",
+  "output": "CMakeFiles/simplesMC.dir/PrimaryGenerator.cpp.o"
+},
+{
+  "directory": "/home/theobp/geant4-projects/geant4_learning/build",
+  "command": "/usr/bin/c++ -DG4LIB_BUILD_DLL -DG4UI_USE_QT -DG4UI_USE_XM -DG4VIS_USE_OI -DG4VIS_USE_OIQT -DG4VIS_USE_OPENGLQT -DG4VIS_USE_OPENGLX -DG4VIS_USE_OPENGLXM -DG4VIS_USE_RAYTRACERX -DG4VIS_USE_RAYTRACER_QT -DG4VIS_USE_TOOLSSG_QT_GLES -DG4VIS_USE_TOOLSSG_QT_ZB -DG4VIS_USE_TOOLSSG_X11_GLES -DG4VIS_USE_TOOLSSG_X11_ZB -DG4VIS_USE_TOOLSSG_XT_GLES -DG4VIS_USE_TOOLSSG_XT_ZB -DPTL_BUILD_DLL -DQT_CORE_LIB -DQT_GUI_LIB -DQT_NO_DEBUG -DQT_OPENGL_LIB -DQT_WIDGETS_LIB -I/home/theobp/geant4-projects/geant4_learning/include -isystem /opt/Geant4/Geant4-v11.4.0/include/Geant4 -isystem /usr/include/qt6/QtCore -isystem /usr/include/qt6 -isystem /usr/lib/qt6/mkspecs/linux-g++ -isystem /usr/include/qt6/QtGui -isystem /usr/include/qt6/QtWidgets -isystem /usr/include/freetype2 -isystem /usr/include/qt6/QtOpenGL -std=gnu++17 -mno-direct-extern-access -o CMakeFiles/simplesMC.dir/MyRunAction.cpp.o -c /home/theobp/geant4-projects/geant4_learning/MyRunAction.cpp",
+  "file": "/home/theobp/geant4-projects/geant4_learning/MyRunAction.cpp",
+  "output": "CMakeFiles/simplesMC.dir/MyRunAction.cpp.o"
+},
+{
+  "directory": "/home/theobp/geant4-projects/geant4_learning/build",
+  "command": "/usr/bin/c++ -DG4LIB_BUILD_DLL -DG4UI_USE_QT -DG4UI_USE_XM -DG4VIS_USE_OI -DG4VIS_USE_OIQT -DG4VIS_USE_OPENGLQT -DG4VIS_USE_OPENGLX -DG4VIS_USE_OPENGLXM -DG4VIS_USE_RAYTRACERX -DG4VIS_USE_RAYTRACER_QT -DG4VIS_USE_TOOLSSG_QT_GLES -DG4VIS_USE_TOOLSSG_QT_ZB -DG4VIS_USE_TOOLSSG_X11_GLES -DG4VIS_USE_TOOLSSG_X11_ZB -DG4VIS_USE_TOOLSSG_XT_GLES -DG4VIS_USE_TOOLSSG_XT_ZB -DPTL_BUILD_DLL -DQT_CORE_LIB -DQT_GUI_LIB -DQT_NO_DEBUG -DQT_OPENGL_LIB -DQT_WIDGETS_LIB -I/home/theobp/geant4-projects/geant4_learning/include -isystem /opt/Geant4/Geant4-v11.4.0/include/Geant4 -isystem /usr/include/qt6/QtCore -isystem /usr/include/qt6 -isystem /usr/lib/qt6/mkspecs/linux-g++ -isystem /usr/include/qt6/QtGui -isystem /usr/include/qt6/QtWidgets -isystem /usr/include/freetype2 -isystem /usr/include/qt6/QtOpenGL -std=gnu++17 -mno-direct-extern-access -o CMakeFiles/simplesMC.dir/MySteppingAction.cpp.o -c /home/theobp/geant4-projects/geant4_learning/MySteppingAction.cpp",
+  "file": "/home/theobp/geant4-projects/geant4_learning/MySteppingAction.cpp",
+  "output": "CMakeFiles/simplesMC.dir/MySteppingAction.cpp.o"
+},
+{
+  "directory": "/home/theobp/geant4-projects/geant4_learning/build",
+  "command": "/usr/bin/c++ -DG4LIB_BUILD_DLL -DG4UI_USE_QT -DG4UI_USE_XM -DG4VIS_USE_OI -DG4VIS_USE_OIQT -DG4VIS_USE_OPENGLQT -DG4VIS_USE_OPENGLX -DG4VIS_USE_OPENGLXM -DG4VIS_USE_RAYTRACERX -DG4VIS_USE_RAYTRACER_QT -DG4VIS_USE_TOOLSSG_QT_GLES -DG4VIS_USE_TOOLSSG_QT_ZB -DG4VIS_USE_TOOLSSG_X11_GLES -DG4VIS_USE_TOOLSSG_X11_ZB -DG4VIS_USE_TOOLSSG_XT_GLES -DG4VIS_USE_TOOLSSG_XT_ZB -DPTL_BUILD_DLL -DQT_CORE_LIB -DQT_GUI_LIB -DQT_NO_DEBUG -DQT_OPENGL_LIB -DQT_WIDGETS_LIB -I/home/theobp/geant4-projects/geant4_learning/include -isystem /opt/Geant4/Geant4-v11.4.0/include/Geant4 -isystem /usr/include/qt6/QtCore -isystem /usr/include/qt6 -isystem /usr/lib/qt6/mkspecs/linux-g++ -isystem /usr/include/qt6/QtGui -isystem /usr/include/qt6/QtWidgets -isystem /usr/include/freetype2 -isystem /usr/include/qt6/QtOpenGL -std=gnu++17 -mno-direct-extern-access -o CMakeFiles/simplesMC.dir/MyActionInitialization.cpp.o -c /home/theobp/geant4-projects/geant4_learning/MyActionInitialization.cpp",
+  "file": "/home/theobp/geant4-projects/geant4_learning/MyActionInitialization.cpp",
+  "output": "CMakeFiles/simplesMC.dir/MyActionInitialization.cpp.o"
+},
+{
+  "directory": "/home/theobp/geant4-projects/geant4_learning/build",
+  "command": "/usr/bin/c++ -DG4LIB_BUILD_DLL -DG4UI_USE_QT -DG4UI_USE_XM -DG4VIS_USE_OI -DG4VIS_USE_OIQT -DG4VIS_USE_OPENGLQT -DG4VIS_USE_OPENGLX -DG4VIS_USE_OPENGLXM -DG4VIS_USE_RAYTRACERX -DG4VIS_USE_RAYTRACER_QT -DG4VIS_USE_TOOLSSG_QT_GLES -DG4VIS_USE_TOOLSSG_QT_ZB -DG4VIS_USE_TOOLSSG_X11_GLES -DG4VIS_USE_TOOLSSG_X11_ZB -DG4VIS_USE_TOOLSSG_XT_GLES -DG4VIS_USE_TOOLSSG_XT_ZB -DPTL_BUILD_DLL -DQT_CORE_LIB -DQT_GUI_LIB -DQT_NO_DEBUG -DQT_OPENGL_LIB -DQT_WIDGETS_LIB -I/home/theobp/geant4-projects/geant4_learning/include -isystem /opt/Geant4/Geant4-v11.4.0/include/Geant4 -isystem /usr/include/qt6/QtCore -isystem /usr/include/qt6 -isystem /usr/lib/qt6/mkspecs/linux-g++ -isystem /usr/include/qt6/QtGui -isystem /usr/include/qt6/QtWidgets -isystem /usr/include/freetype2 -isystem /usr/include/qt6/QtOpenGL -std=gnu++17 -mno-direct-extern-access -o CMakeFiles/simplesMC.dir/MyEventAction.cpp.o -c /home/theobp/geant4-projects/geant4_learning/MyEventAction.cpp",
+  "file": "/home/theobp/geant4-projects/geant4_learning/MyEventAction.cpp",
+  "output": "CMakeFiles/simplesMC.dir/MyEventAction.cpp.o"
+}
+]

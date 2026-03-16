@@ -12,8 +12,4 @@ public:
 
 private:
   G4ParticleGun *fParticleGun;
-  G4double fE0;
-  G4double fEmax;
-  G4int fnPoints;
-  G4int fNumberOfEventsPerEnergy;
 };

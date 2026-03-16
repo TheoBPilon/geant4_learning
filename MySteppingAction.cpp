@@ -1,44 +1,54 @@
 #include "include/MySteppingAction.hh"
 #include "G4AnalysisManager.hh"
+#include "G4RunManager.hh"
 #include "G4Step.hh"
 #include "G4SystemOfUnits.hh"
 #include "G4Track.hh"
+#include "G4UserEventAction.hh"
 #include "G4VProcess.hh"
-
+#include "include/MyEventAction.hh"
+#include <G4ios.hh>
 MySteppingAction::MySteppingAction() {}
 MySteppingAction::~MySteppingAction() {}
 
 void MySteppingAction::UserSteppingAction(const G4Step *step) {
-  G4Track *track = step->GetTrack();
-  // 1) Apenas gamma primário
-  if (track->GetParticleDefinition()->GetParticleName() != "gamma")
+  auto track = step->GetTrack();
+  G4AnalysisManager *analysisManager = G4AnalysisManager::Instance();
+  // ponteiro para MyEventAction
+  auto evtAction =
+      dynamic_cast<MyEventAction *>(const_cast<G4UserEventAction *>(
+          G4RunManager::GetRunManager()->GetUserEventAction()));
+
+  if (!evtAction) {
+    G4cout << "nao ta achando o MyEventAction" << G4endl;
+  }
+
+  auto physvol = step->GetPreStepPoint()->GetPhysicalVolume();
+  auto post_step_physvol = step->GetPostStepPoint()->GetPhysicalVolume();
+
+  if (!physvol)
     return;
-  if (track->GetParentID() != 0)
-    return;
-  // 2) Pega processo que definiu o passo
-  const G4VProcess *process = step->GetPostStepPoint()->GetProcessDefinedStep();
-  if (!process)
-    return;
-  G4String processName = process->GetProcessName();
-  // 3) Ignora transporte
-  if (processName == "Transportation")
-    return;
-  // 4) Energia inicial do fóton no momento da interação
-  G4double energy = step->GetPreStepPoint()->GetKineticEnergy() / keV;
-  auto analysisManager = G4AnalysisManager::Instance();
-  // 5) Classificação do processo
-  if (processName == "phot")
-    analysisManager->FillNtupleIColumn(0, 0);
-  else if (processName == "compt")
-    analysisManager->FillNtupleIColumn(0, 1);
-  else if (processName == "conv")
-    analysisManager->FillNtupleIColumn(0, 2);
-  else
+  if (!post_step_physvol)
     return;
 
-  analysisManager->FillNtupleDColumn(1, energy);
-  analysisManager->AddNtupleRow();
+  if (physvol->GetName() == "trigger_volume") {
+    G4double edep_trigger = step->GetTotalEnergyDeposit();
+    if (edep_trigger > 50 * keV) {
+      evtAction->SetTriggerPassed();
+      evtAction->AddEdepPMT(edep_trigger);
+    }
+  }
 
-  // 6) Mata o gamma após a primeira interação
-  track->SetTrackStatus(fStopAndKill);
+  if (post_step_physvol->GetName() == "Box2") {
+    auto edep = step->GetTotalEnergyDeposit();
+    if (track->GetDefinition()->GetParticleName() == "gamma" &&
+        physvol->GetName() == "Box") {
+      auto gamma_kin_energy = step->GetPreStepPoint()->GetKineticEnergy();
+      if (gamma_kin_energy > 1 * keV) {
+        analysisManager->FillNtupleDColumn(1, gamma_kin_energy);
+      }
+    }
+
+    evtAction->AddEdep(edep);
+  }
 }

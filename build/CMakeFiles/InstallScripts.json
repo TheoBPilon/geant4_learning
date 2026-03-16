@@ -1,0 +1,7 @@
+{
+	"InstallScripts" : 
+	[
+		"/home/theobp/geant4-projects/geant4_learning/build/cmake_install.cmake"
+	],
+	"Parallel" : false
+}

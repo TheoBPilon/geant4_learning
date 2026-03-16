@@ -1,0 +1,2 @@
+set(__QT_DEPLOY_TARGET_simplesMC_FILE /home/theobp/geant4-projects/geant4_learning/build/simplesMC)
+set(__QT_DEPLOY_TARGET_simplesMC_TYPE EXECUTABLE)

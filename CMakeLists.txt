@@ -1,25 +1,18 @@
+cmake_minimum_required(VERSION 3.16)
+project(SimplesMC LANGUAGES CXX)
 
-# Versão mínima do CMake
-cmake_minimum_required(VERSION 3.16...3.27)
+set(CMAKE_CXX_STANDARD 17)
+set(CMAKE_CXX_STANDARD_REQUIRED ON)
+set(CMAKE_EXPORT_COMPILE_COMMANDS ON)
+set(QT_MAJOR_VERSION 6)
 
-# Nome do projeto
-project(SimplesMC)
-
-# Opção para UI e visualização (ligada por padrão)
-option(WITH_GEANT4_UIVIS "Build with Geant4 UI and visualization drivers" ON)
-
-# Encontrar o Geant4 com UI e Vis
 find_package(Geant4 REQUIRED ui_all vis_all)
+find_package(Qt6 REQUIRED COMPONENTS Core Gui Widgets OpenGL)
 
-# Configurar flags, includes e definições do Geant4
+find_package(ROOT REQUIRED COMPONENTS Core RIO Hist Tree)
+
 include(${Geant4_USE_FILE})
 
-# Diretórios de inclusão locais
-include_directories(
-    ${PROJECT_SOURCE_DIR}
-)
-
-# Arquivos fonte essenciais
 set(SOURCE_FILES
     main.cpp
     MyDetector.cpp
@@ -27,13 +20,27 @@ set(SOURCE_FILES
     MyRunAction.cpp
     MySteppingAction.cpp
     MyActionInitialization.cpp
+    MyEventAction.cpp
 )
 
-# Criar o executável
 add_executable(simplesMC ${SOURCE_FILES})
 
-# Linkar com as bibliotecas do Geant4
-target_link_libraries(simplesMC ${Geant4_LIBRARIES})
+target_include_directories(simplesMC PRIVATE
+    ${PROJECT_SOURCE_DIR}/include
+)
+# -------------------------
+# Linkagem moderna
+# -------------------------
+target_link_libraries(simplesMC PRIVATE
+    ${Geant4_LIBRARIES}
+    Qt6::Core
+    Qt6::Gui
+    Qt6::Widgets
+    Qt6::OpenGL
+    ROOT::Core
+)
 
-# Instalação local (opcional)
-install(TARGETS simplesMC DESTINATION ${CMAKE_CURRENT_SOURCE_DIR})
+# -------------------------
+# Instalação
+# -------------------------
+install(TARGETS simplesMC DESTINATION ${PROJECT_SOURCE_DIR})

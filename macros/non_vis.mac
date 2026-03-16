@@ -1,4 +1,4 @@
 /run/initialize
 /run/printProgress 1000
-
-/run/beamOn 100000
+/process/had/rdm/thresholdForVeryLongDecayTime 1e+12 s
+/run/beamOn 1000000

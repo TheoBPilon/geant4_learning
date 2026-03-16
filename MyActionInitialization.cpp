@@ -1,4 +1,5 @@
 #include "include/MyActionInitialization.hh"
+#include "include/MyEventAction.hh"
 #include "include/MyRunAction.hh"
 #include "include/MySteppingAction.hh"
 #include "include/PrimaryGenerator.hh"
@@ -14,5 +15,6 @@ void MyActionInitialization::BuildForMaster() const {
 void MyActionInitialization::Build() const {
   SetUserAction(new MyPrimaryGenerator);
   SetUserAction(new MyRunAction);
+  SetUserAction(new MyEventAction);
   SetUserAction(new MySteppingAction);
 }

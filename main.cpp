@@ -1,9 +1,13 @@
 #include "FTFP_BERT.hh"
+#include "G4DecayPhysics.hh"
+#include "G4OpticalParameters.hh"
 #include "G4OpticalPhysics.hh"
+#include "G4RadioactiveDecayPhysics.hh"
 #include "G4RunManager.hh"
 #include "G4UIExecutive.hh"
 #include "G4UImanager.hh"
 #include "G4VisExecutive.hh"
+#include "Shielding.hh"
 // incluindo o detector
 #include "include/MyActionInitialization.hh"
 #include "include/MyDetector.hh"
@@ -16,8 +20,15 @@ int main(int argc, char **argv) {
   // Registrando a classe de geometria no Kernel
   runManager->SetUserInitialization(new MyDetector());
   // Registrando a physics list no Kernel
-  auto physicsList = new FTFP_BERT();
+  auto physicsList = new Shielding();
+  physicsList->RegisterPhysics(new G4RadioactiveDecayPhysics());
+  physicsList->RegisterPhysics(new G4DecayPhysics());
   physicsList->RegisterPhysics(new G4OpticalPhysics());
+  // ativar cintilacao por particula
+  auto op_param = G4OpticalParameters::Instance();
+  auto opticalPhysics = new G4OpticalPhysics();
+
+  physicsList->RegisterPhysics(opticalPhysics);
   runManager->SetUserInitialization(physicsList);
 
   runManager->SetUserInitialization(new MyActionInitialization());
